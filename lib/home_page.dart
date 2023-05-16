@@ -11,6 +11,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       backgroundColor: Colors.white,
       body: Container(
         padding: const EdgeInsets.only(top: 70, left: 25),
@@ -134,7 +135,9 @@ class _HomePageState extends State<HomePage> {
                 width: 150,
                 height: 150,
                 padding: EdgeInsets.only(left: 35, right: 35),
-                decoration: BoxDecoration(color: Colors.blueGrey),
+                decoration: BoxDecoration(
+                  color: Colors.blueGrey,
+                ),
                 child: Row(
                   children: [
                     Text(
@@ -150,6 +153,7 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
+      bottomNavigationBar: AboutListTile(aboutBoxChildren: []),
     );
   }
 }
